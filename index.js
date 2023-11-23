@@ -41,6 +41,7 @@ async function getDetailAnime(url) {
 
   const fotonime = $("div.bg-white.shadow").find(".postprocover img").attr("src");
   const judul = $("div.bg-white.shadow").find("div.colinfo h2").first().text();
+  const jepang = $("div.bg-white.shadow").find("div.colinfo span").first().text();
   const sinopsis = $("div.jcontent.jayapanel").find(".sinops").text();
 
   $(".colinfo .episodelist ul li").each((index, element) => {
@@ -59,6 +60,7 @@ async function getDetailAnime(url) {
   arr.push({
     fotonime: fotonime,
     judul: judul,
+    jepang: jepang,
     sinopsis: sinopsis,
   });
 
