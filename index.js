@@ -40,14 +40,8 @@ async function getDetailAnime(url) {
   let arr2 = [];
 
   const fotonime = $("div.bg-white.shadow").find(".postprocover img").attr("src");
-  const judul = $("div.bg-white.shadow").find("div.colinfo h2(2)").first().text();
-  const skor = $("div.bg-white.shadow").find(".infolist p:nth-child(3)").text();
-  const produser = $("div.bg-white.shadow").find(".infolist p:nth-child(4)").text();
-  const status = $("div.bg-white.shadow").find(".infolist p:nth-child(6)").text();
-  const totaleps = $("div.bg-white.shadow").find(".infolist p:nth-child(7)").text();
-  const studio = $("div.bg-white.shadow").find(".infolist p:nth-child(10)").text();
-  const genre = $("div.bg-white.shadow").find(".genres p:nth-child(11)").text();
-  const sinopsis = $("div.bg-white.shadow").find(".sinops").text();
+  const judul = $("div.bg-white.shadow").find("div.colinfo h2").first().text();
+  const sinopsis = $("div.jcontent.jayapanel").find(".sinops").text();
 
   $(".colinfo .episodelist ul li").each((index, element) => {
     const episod = $(element).find("a").text();
@@ -65,14 +59,7 @@ async function getDetailAnime(url) {
   arr.push({
     fotonime: fotonime,
     judul: judul,
-    skor: skor,
-    produser: produser,
-    status: status,
-    totaleps: totaleps,
-    studio: studio,
-    genre: genre,
     sinopsis: sinopsis,
-    episodelist: arr2,
   });
 
   let objek = {
