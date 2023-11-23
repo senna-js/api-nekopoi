@@ -51,7 +51,7 @@ async function getDetailAnime(url) {
   const genres = $("div.colinfo").find("div.genres a").text();
   const sinopsis = $("div.jcontent.jayapanel").find(".sinops").text();
 
-  $(".ulinklist .scrcnt ul li").each((index, element) => {
+  $("div.clinklist ul.ulinklist div.scrcnt ul li").each((index, element) => {
     const episod = $(element).find("a").text();
     let endpoint = $(element).find("a").attr("href");
 
