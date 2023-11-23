@@ -94,7 +94,7 @@ async function getDetailAnime(url) {
   let arr = [];
   let arr2 = [];
 
-  const fotonime = $(".colinfo").find(".postprocover img").attr("src");
+  const fotonime = $("div.bg-white.shadow").find(".postprocover img").attr("src");
   const judul = $(".colinfo").find(".infolist p").first().text();
   const skor = $(".colinfo").find(".infolist p:nth-child(3)").text();
   const produser = $(".colinfo").find(".infolist p:nth-child(4)").text();
