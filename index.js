@@ -44,7 +44,7 @@ async function getDetailAnime(url) {
   const jepang = $("div.bg-white.shadow").find("div.colinfo span").first().text();
   const status = $("div.post-body").find("ul.infolist a").first().text();
   const type = $("div.post-body").find("ul.infolist a:nth-child(2)").text();
-  const score = $("div.post-body").find("ul.infolist span:nth-child(3)").text();
+  const score = $("div.post-body").find("ul.infolist b:nth-child(3)").text();
   const duration = $("div.post-body").find("ul.infolist span:nth-child(4)").text();
   const released = $("div.post-body").find("ul.infolist span:nth-child(5)").text();
   const producers = $("div.post-body").find("ul.infolist span:nth-child(6)").text();
