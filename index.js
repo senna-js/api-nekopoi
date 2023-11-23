@@ -42,6 +42,12 @@ async function getDetailAnime(url) {
   const fotonime = $("div.bg-white.shadow").find(".postprocover img").attr("src");
   const judul = $("div.bg-white.shadow").find("div.colinfo h2").first().text();
   const jepang = $("div.bg-white.shadow").find("div.colinfo span").first().text();
+  const status = $("div.bg-white.shadow").find("div.colinfo span").first().text();
+  const score = $("div.bg-white.shadow").find("div.colinfo span").first().text();
+  const duration = $("div.bg-white.shadow").find("div.colinfo span").first().text();
+  const released = $("div.bg-white.shadow").find("div.colinfo span").first().text();
+  const producers = $("div.bg-white.shadow").find("div.colinfo span").first().text();
+  const genres = $("div.colinfo").find("div.genres a").first().text();
   const sinopsis = $("div.jcontent.jayapanel").find(".sinops").text();
 
   $(".colinfo .episodelist ul li").each((index, element) => {
@@ -61,6 +67,7 @@ async function getDetailAnime(url) {
     fotonime: fotonime,
     judul: judul,
     jepang: jepang,
+    genres: genres,
     sinopsis: sinopsis,
   });
 
