@@ -47,7 +47,7 @@ async function getDetailAnime(url) {
   const duration = $("div.bg-white.shadow").find("div.colinfo span").first().text();
   const released = $("div.bg-white.shadow").find("div.colinfo span").first().text();
   const producers = $("div.bg-white.shadow").find("div.colinfo span").first().text();
-  const genres = $("div.colinfo").find("div.genres a").first().text();
+  const genres = $("div.colinfo").find("div.genres a:nth-child(11)").text();
   const sinopsis = $("div.jcontent.jayapanel").find(".sinops").text();
 
   $(".colinfo .episodelist ul li").each((index, element) => {
