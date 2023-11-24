@@ -9,7 +9,7 @@ app.get("/", (req, res) => {
 
   const keluaran = {
     success: true,
-    author: "Eksa Dev",
+    author: "Wibumoe",
     sumber: "https://nekopoi.help",
     data: {
       //Ambil_anime_terbaru: "/terbaru",
@@ -43,11 +43,11 @@ async function getDetailAnime(url) {
   const judul = $("div.bg-white.shadow").find("div.colinfo h2").first().text();
   const jepang = $("div.bg-white.shadow").find("div.colinfo span").first().text();
   const status = $("div.post-body").find("ul.infolist a").first().text();
-  const type = $("div.post-body").find("ul.infolist a:nth-child(2)").text();
-  const score = $("div.post-body").find("ul.infolist span:nth-child(3)").text();
-  const duration = $("div.post-body").find("ul.infolist span:nth-child(4)").text();
-  const released = $("div.post-body").find("ul.infolist span:nth-child(5)").text();
-  const producers = $("div.post-body").find("ul.infolist span:nth-child(6)").text();
+  const type = $("div.post-body").find("ul.infolist a(2)").text();
+  const score = $("div.post-body").find("ul.infolist span(3)").text();
+  const duration = $("div.post-body").find("ul.infolist span(4)").text();
+  const released = $("div.post-body").find("ul.infolist span(5)").text();
+  const producers = $("div.post-body").find("ul.infolist span(6)").text();
   const genres = $("div.colinfo").find("div.genres a").text();
   const sinopsis = $("div.jcontent.jayapanel").find(".sinops").text();
 
@@ -80,7 +80,7 @@ async function getDetailAnime(url) {
 
   let objek = {
     success: true,
-    author: "Eksa Dev",
+    author: "Wibumoe",
     sumber: "https://nekopoi.help/",
     data: {
       arr,
