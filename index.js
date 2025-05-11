@@ -10,14 +10,14 @@ app.get("/", (req, res) => {
   const keluaran = {
     success: true,
     author: "Wibumoe",
-    sumber: "https://nekopoi.help",
+    sumber: "https://nekopoi.care",
     data: {
-      //Ambil_anime_terbaru: "/terbaru",
+      Ambil_anime_terbaru: "/terbaru",
       Ambil_detail_anime: "/detail/:endpoint",
-      //Ambil_stream_anime: "/stream/:endpoint",
-      //Ambil_search_anime: "/search/:namaanime",
-      //Ambil_all_kategori_list: "/genrelist",
-      //Ambil_data_genre: "/genres/:endpoint",
+      Ambil_stream_anime: "/stream/:endpoint",
+      Ambil_search_anime: "/search/:namaanime",
+      Ambil_all_kategori_list: "/genrelist",
+      Ambil_data_genre: "/genres/:endpoint",
     },
   };
   res.send(keluaran);
@@ -32,7 +32,7 @@ app.get("/detail/:nama", (req, res) => {
 });
 
 async function getDetailAnime(url) {
-  let { data } = await axios.get("https://nekopoi.help/anime/" + url);
+  let { data } = await axios.get("https://nekopoi.care/anime/" + url);
 
   const $ = cheerio.load(data);
 
@@ -81,7 +81,7 @@ async function getDetailAnime(url) {
   let objek = {
     success: true,
     author: "Wibumoe",
-    sumber: "https://nekopoi.help/",
+    sumber: "https://nekopoi.care/",
     data: {
       arr,
     },
